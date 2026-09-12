@@ -1,0 +1,164 @@
+/* ----------------- 6. CTA / Stay Connected Section ----------------- */
+.cta-connected-section {
+  padding: 2.75rem 0;
+  background-color: #ffffff;
+}
+
+.cta-banner-box {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  padding: 4.5rem 2.5rem;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  background: 
+    linear-gradient(
+      135deg,
+      rgba(11, 26, 44, 0.65) 0%,
+      rgba(11, 51, 102, 0.48) 50%,
+      rgba(0, 168, 181, 0.38) 100%
+    ),
+    url('/required pic/CTA.avif') center 18% / cover no-repeat;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cta-banner-content {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-mini-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.cta-main-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+}
+
+.cta-main-desc {
+  font-size: 1.08rem;
+  line-height: 1.55;
+  color: #ffffff;
+  margin-bottom: 1.75rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+}
+
+.cta-action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn-cta-enquire {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  border-radius: var(--border-radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-cta-enquire:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.btn-cta-contact {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.85rem 2rem;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-cta-contact:hover {
+  background-color: #ffffff;
+  color: var(--color-primary);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+  .cta-banner-box {
+    padding: 3.5rem 2rem;
+    min-height: 380px;
+    background: 
+      linear-gradient(
+        135deg,
+        rgba(7, 24, 46, 0.82) 0%,
+        rgba(11, 51, 102, 0.68) 50%,
+        rgba(0, 168, 181, 0.52) 100%
+      ),
+      url('/required pic/CTA.avif') center center / cover no-repeat;
+  }
+}
+
+@media (max-width: 540px) {
+  .cta-connected-section {
+    padding: 1.75rem 0;
+  }
+
+  .cta-banner-box {
+    padding: 2.75rem 1.25rem;
+    min-height: 320px;
+    background: 
+      linear-gradient(
+        180deg,
+        rgba(7, 24, 46, 0.92) 0%,
+        rgba(11, 51, 102, 0.85) 60%,
+        rgba(0, 168, 181, 0.70) 100%
+      ),
+      url('/required pic/CTA.avif') center center / cover no-repeat;
+  }
+
+  .cta-main-title {
+    font-size: 1.85rem;
+  }
+
+  .cta-main-desc {
+    font-size: 0.96rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-action-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn-cta-enquire,
+  .btn-cta-contact {
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1.5rem;
+  }
+}

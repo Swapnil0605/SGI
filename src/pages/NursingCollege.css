@@ -1,0 +1,1007 @@
+/* ===================================================================
+   SURANNAVAR COLLEGE OF NURSING PAGE STYLES
+   Design: The University of Sydney School Landing Page Architecture
+   Typography: Google Sans / Outfit & Sydney Brand Design System
+   Colors: Surannavar Hospital Teal (#00a8b5) & Royal Navy (#0b3366)
+   =================================================================== */
+
+/* ----------------- Breadcrumbs Bar ----------------- */
+.nursing-breadcrumbs-bar {
+  background-color: #f8fafc;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.85rem 0;
+  font-size: 0.88rem;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-item a {
+  color: var(--color-gray-light);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.breadcrumb-item a:hover {
+  color: var(--color-accent);
+}
+
+.breadcrumb-sep {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+}
+
+.breadcrumb-item.active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ----------------- 1. School Hero Banner ----------------- */
+.nursing-hero-banner {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-dark);
+  overflow: hidden;
+  padding: 4.5rem 0;
+}
+
+.nursing-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(0.85);
+}
+
+.nursing-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 26, 44, 0.94) 0%,
+    rgba(11, 26, 44, 0.80) 55%,
+    rgba(11, 26, 44, 0.45) 100%
+  );
+}
+
+.nursing-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0;
+  max-width: 820px;
+  color: #ffffff;
+}
+
+.nursing-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: rgba(0, 168, 181, 0.25);
+  border: 1px solid var(--color-accent);
+  padding: 0.35rem 0.9rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.nursing-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+/* ----------------- 1b. School Faculty Banner Strip ----------------- */
+.school-faculty-strip {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: #ffffff;
+  padding: 3.5rem 0;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 24px rgba(7, 34, 68, 0.18);
+}
+
+.school-faculty-strip .site-container {
+  max-width: 1380px;
+}
+
+.school-faculty-layout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4.5rem;
+}
+
+.school-faculty-brand {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.school-faculty-parent {
+  font-family: var(--font-serif), 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.3;
+  display: block;
+}
+
+.school-faculty-title {
+  font-family: var(--font-serif), 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0.15rem 0 0 0;
+  display: block;
+}
+
+.school-faculty-divider {
+  width: 1px;
+  height: 84px;
+  background-color: rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+.school-faculty-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.school-faculty-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.school-faculty-tagline {
+  font-family: var(--font-brand-primary), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.school-faculty-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 168, 181, 0.16);
+  border: 1px solid rgba(0, 168, 181, 0.45);
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+}
+
+.school-faculty-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 0 0 rgba(0, 168, 181, 0.8);
+  animation: pulse 1.8s infinite;
+  display: inline-block;
+}
+
+.school-faculty-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.school-faculty-btn-primary {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: 1.5px solid var(--color-accent);
+  padding: 0.78rem 1.85rem;
+  border-radius: 4px;
+  font-family: var(--font-brand-primary), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.22s ease;
+}
+
+.school-faculty-btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 168, 181, 0.45);
+}
+
+.school-faculty-btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  padding: 0.78rem 1.85rem;
+  border-radius: 4px;
+  font-family: var(--font-brand-primary), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.22s ease;
+}
+
+.school-faculty-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .school-faculty-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .school-faculty-divider {
+    display: none;
+  }
+}
+
+/* ----------------- 2. About College Section ----------------- */
+.nursing-about-section {
+  padding: 5rem 0 3.5rem 0;
+  background-color: #ffffff;
+}
+
+.nursing-about-container {
+  max-width: 980px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background-color: var(--color-accent-light);
+  padding: 0.35rem 0.85rem;
+  border-radius: 4px;
+  margin-bottom: 1.25rem;
+}
+
+.nursing-about-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+}
+
+.nursing-accent-bar {
+  width: 52px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+}
+
+.nursing-about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.nursing-lead-para {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: #1e293b;
+}
+
+.nursing-secondary-para {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-gray-text);
+}
+
+/* ----------------- 3. Programme Key Stats Strip ----------------- */
+.nursing-stats-strip {
+  background-color: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 4.5rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem;
+}
+
+.stat-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.stat-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.25rem;
+  color: var(--color-accent);
+}
+
+.stat-strip-icon {
+  color: var(--color-accent);
+  transition: transform 0.28s ease, color 0.28s ease;
+}
+
+.stat-column:hover .stat-strip-icon {
+  transform: translateY(-2px) scale(1.05);
+  color: var(--color-accent-hover);
+}
+
+.stat-value {
+  font-family: var(--font-heading), var(--font-brand-primary), sans-serif;
+  font-size: clamp(1.85rem, 2.6vw, 2.25rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.stat-desc {
+  font-family: var(--font-brand-primary), sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--color-gray-text);
+  margin: 0;
+  font-weight: 450;
+}
+
+/* ----------------- 4. Sydney-Style Exploration Cards ----------------- */
+.nursing-explore-section {
+  padding: 5.5rem 0;
+  background-color: #ffffff;
+}
+
+.explore-header-area {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.explore-section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  margin-top: 0.5rem;
+}
+
+.explore-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.explore-pillar-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.explore-pillar-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: #cbd5e1;
+}
+
+.card-media-wrap {
+  width: 100%;
+  height: 230px;
+  position: relative;
+  overflow: hidden;
+  background-color: #0b223d;
+}
+
+.card-media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.card-media-img-study {
+  object-position: center 8%;
+}
+
+.explore-pillar-card:hover .card-media-img {
+  transform: scale(1.06);
+}
+
+.card-content-wrap {
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.card-pillar-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-gray-text);
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+
+.card-pillar-desc:last-child {
+  margin-bottom: 0;
+}
+
+.card-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.card-action-btn:hover {
+  color: var(--color-accent-hover);
+  transform: translateX(4px);
+}
+
+/* ----------------- 5. Career Opportunities Slider ----------------- */
+.nursing-careers-section {
+  padding: 5.5rem 0;
+  background-color: #f8fafc;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.careers-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.careers-header-text {
+  max-width: 680px;
+}
+
+.careers-section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.careers-lead-text {
+  font-size: 1.08rem;
+  color: var(--color-gray-text);
+  line-height: 1.6;
+}
+
+/* Slider Controls */
+.slider-nav-controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.slider-nav-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background-color: #ffffff;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.slider-nav-btn:hover:not(:disabled) {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 168, 181, 0.3);
+}
+
+.slider-nav-btn.disabled,
+.slider-nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-color: #cbd5e1;
+}
+
+/* Slider Container & Track */
+.careers-slider-container {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 0.75rem 0 1.5rem 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.careers-slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.careers-slider-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+}
+
+.career-slide-card {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.career-slide-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+  background: var(--color-accent);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.career-slide-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.career-slide-card:hover::before {
+  opacity: 1;
+}
+
+.slide-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.career-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: rgba(0, 168, 181, 0.1);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.28s ease;
+}
+
+.career-slide-card:hover .career-icon-box {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px rgba(0, 168, 181, 0.35);
+}
+
+.career-tag-pill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: rgba(11, 51, 102, 0.07);
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+}
+
+.career-slide-body {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.career-slide-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.28;
+  margin-bottom: 0.6rem;
+}
+
+.career-slide-desc {
+  font-size: 0.92rem;
+  color: var(--color-gray-text);
+  line-height: 1.6;
+}
+
+.career-slide-footer {
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.career-learn-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: var(--transition);
+}
+
+.career-learn-more:hover {
+  color: var(--color-accent-hover);
+  transform: translateX(4px);
+}
+
+/* Dots Pagination */
+.slider-dots-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.slider-dot.active {
+  width: 24px;
+  border-radius: 12px;
+  background-color: var(--color-accent);
+}
+
+/* ----------------- 6. Counsellor Contact Banner & Cards ----------------- */
+.nursing-contact-section {
+  padding: 5.5rem 0;
+  background-color: #ffffff;
+}
+
+.contact-banner-box {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #072244 100%);
+  border-radius: var(--border-radius-lg);
+  padding: 3.5rem 3rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-banner-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-accent);
+}
+
+.contact-banner-tagline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}
+
+.contact-banner-desc {
+  font-size: 1.12rem;
+  color: #cbd5e1;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.contact-action-card {
+  background: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.contact-action-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.action-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.contact-action-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.28rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.65rem;
+}
+
+.contact-action-card p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--color-gray-text);
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.contact-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact-card-btn:hover {
+  background-color: var(--color-accent);
+}
+
+/* ----------------- Responsive Media Queries ----------------- */
+@media (max-width: 1024px) {
+  .explore-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .career-slide-card {
+    flex: 0 0 300px;
+  }
+
+  .contact-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Tablet Hero Overlay: Strengthened for readability across cropped background */
+  .nursing-hero-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(7, 24, 46, 0.94) 0%,
+      rgba(11, 26, 44, 0.86) 60%,
+      rgba(11, 26, 44, 0.65) 100%
+    );
+  }
+}
+
+@media (max-width: 768px) {
+  .nursing-stats-strip {
+    padding: 3rem 0;
+  }
+
+  .careers-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .career-slide-card {
+    flex: 0 0 270px;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .contact-banner-box {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .nursing-hero-banner {
+    min-height: 380px;
+    padding: 3.5rem 0;
+  }
+
+  .nursing-hero-content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  /* Mobile Hero Overlay: full vertical coverage for maximum contrast behind text */
+  .nursing-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(7, 24, 46, 0.96) 0%,
+      rgba(11, 26, 44, 0.90) 65%,
+      rgba(7, 24, 46, 0.82) 100%
+    );
+  }
+
+  .nursing-hero-banner {
+    min-height: 300px;
+    padding: 2.75rem 0;
+  }
+
+  .nursing-hero-content {
+    padding: 0;
+  }
+
+  .nursing-hero-title {
+    font-size: clamp(1.8rem, 6.5vw, 2.4rem);
+  }
+
+  .school-faculty-strip {
+    padding: 2.25rem 0;
+  }
+
+  .school-faculty-brand strong {
+    font-size: 1.2rem;
+  }
+
+  .school-faculty-brand span {
+    font-size: 0.9rem;
+  }
+
+  .school-faculty-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .school-faculty-btn-primary,
+  .school-faculty-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .stat-num {
+    font-size: 2.2rem;
+  }
+
+  .career-slide-card {
+    flex: 0 0 min(280px, 80vw);
+  }
+
+  .contact-banner-box {
+    padding: 2rem 1.25rem;
+  }
+}

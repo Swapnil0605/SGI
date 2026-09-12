@@ -1,0 +1,137 @@
+/* ----------------- 7. Pre-Footer Vision Band (Sydney Uni Architecture) ----------------- */
+.above-footer-section {
+  padding: 3.5rem 0;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border-top: none;
+}
+
+.vision-band-grid {
+  display: grid;
+  grid-template-columns: 1.45fr auto 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.vision-band-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.vision-quote-icon {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  line-height: 0.9;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.35rem;
+}
+
+.vision-band-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(0.98rem, 2.4vw, 1.2rem);
+  font-style: italic;
+  line-height: 1.65;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  max-width: 720px;
+}
+
+.vision-band-attribution {
+  display: block;
+  font-family: var(--font-main);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.vision-band-divider {
+  width: 1px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.vision-band-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vision-brand-card,
+.vision-brand-badge {
+  background: #ffffff;
+  border-radius: var(--border-radius-md);
+  padding: 1.75rem 2.25rem;
+  box-shadow: 0 10px 32px rgba(7, 34, 68, 0.22);
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vision-brand-card:hover,
+.vision-brand-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 40px rgba(7, 34, 68, 0.28);
+}
+
+.vision-brand-logo {
+  height: 68px;
+  max-height: 74px;
+  width: auto;
+  margin: 0 auto 0.85rem auto;
+  display: block;
+  object-fit: contain;
+}
+
+.vision-brand-tagline strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.vision-brand-tagline span {
+  font-size: 0.8rem;
+  color: var(--color-gray-text);
+  margin-top: 0.25rem;
+  display: block;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .vision-band-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .vision-band-divider {
+    display: none;
+  }
+  .vision-band-left {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .above-footer-section,
+  .vision-band-section {
+    padding: 2.25rem 0;
+  }
+  .vision-brand-card,
+  .vision-brand-badge {
+    padding: 1.25rem 1.5rem;
+    width: 100%;
+    max-width: 320px;
+  }
+  .vision-brand-logo {
+    height: 56px;
+  }
+}

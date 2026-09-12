@@ -1,0 +1,1547 @@
+/* ==========================================================================
+   FELLOWSHIP PAGE STYLES (Surannavar Superspeciality Hospital)
+   ========================================================================== */
+
+.fellowship-page {
+  background-color: #ffffff;
+  color: var(--color-text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* ----------------- Breadcrumb Bar ----------------- */
+.fellowship-breadcrumbs {
+  background-color: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.85rem 0;
+  font-size: 0.88rem;
+}
+
+.breadcrumb-trail {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb-trail a {
+  color: var(--color-gray-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-trail a:hover {
+  color: var(--color-accent);
+}
+
+.breadcrumb-trail li[aria-hidden="true"] {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-trail .active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ----------------- Common Section Typography ----------------- */
+.section-eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.section-main-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.section-subtext {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: var(--color-gray-text);
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.section-header-centered {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+/* ----------------- 1. Fellowship Hero Section ----------------- */
+.fellowship-hero-section {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #051429 0%, #0a274d 50%, #0c386b 100%);
+  color: #ffffff;
+  padding: 4.5rem 0;
+  overflow: hidden;
+}
+
+.fellowship-hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 85% 20%, rgba(0, 168, 181, 0.22) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.fellowship-hero-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.fellowship-hero-badge-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.fellowship-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 168, 181, 0.2);
+  border: 1px solid rgba(0, 168, 181, 0.5);
+  color: #5eead4;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.fellowship-pill-subbadge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.fellowship-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.16;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.fellowship-hero-lead {
+  font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+  line-height: 1.65;
+  color: #cbd5e1;
+  margin-bottom: 2.25rem;
+  max-width: 660px;
+}
+
+.fellowship-hero-metrics {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 1.1rem 1.75rem;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 2.5rem;
+  width: fit-content;
+}
+
+.hero-metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-metric-item strong {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #5eead4;
+  line-height: 1.2;
+}
+
+.hero-metric-item span {
+  font-size: 0.78rem;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+.hero-metric-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.fellowship-hero-ctas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.btn-fellowship-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.96rem;
+  padding: 0.95rem 1.85rem;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 18px rgba(0, 168, 181, 0.35);
+}
+
+.btn-fellowship-primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(0, 168, 181, 0.45);
+}
+
+.btn-fellowship-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.96rem;
+  padding: 0.95rem 1.85rem;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-fellowship-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+}
+
+/* Hero Visual Box */
+.fellowship-hero-visual {
+  position: relative;
+}
+
+.hero-image-frame {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-frame-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.hero-image-frame:hover .hero-frame-img {
+  transform: scale(1.03);
+}
+
+.hero-floating-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(11, 39, 77, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+.card-icon-bubble {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.floating-card-title {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: #ffffff;
+}
+
+.floating-card-sub {
+  display: block;
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+/* ----------------- 2. Fellowship Information Highlight Strip ----------------- */
+.fellowship-info-strip {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+  padding: 2.25rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.info-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+}
+
+.info-strip-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.5rem 0.25rem;
+}
+
+.info-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: rgba(0, 168, 181, 0.1);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  color: #64748b;
+  margin-bottom: 0.2rem;
+}
+
+.info-val {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.25;
+}
+
+.info-detail {
+  font-size: 0.76rem;
+  color: var(--color-gray-text);
+  margin-top: 0.2rem;
+}
+
+/* ----------------- 3. Fellowship Overview Section ----------------- */
+.fellowship-overview-section {
+  padding: 5.5rem 0;
+  background-color: #f8fafc;
+}
+
+.overview-editorial-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.overview-lead-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+}
+
+.overview-body-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-gray-text);
+  margin-bottom: 2rem;
+}
+
+.overview-feature-pills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-bottom: 2.5rem;
+}
+
+.feature-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 0.65rem 1rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.feature-pill svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.overview-quote-card {
+  background: #ffffff;
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.quote-icon {
+  color: rgba(0, 168, 181, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.overview-quote-card p {
+  font-size: 0.98rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.quote-author strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--color-primary);
+}
+
+.quote-author span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-gray-text);
+}
+
+/* Image Stack */
+.overview-image-stack {
+  position: relative;
+}
+
+.image-stack-main {
+  position: relative;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.overview-img-primary {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-caption-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(7, 30, 61, 0.85);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+}
+
+/* ----------------- 4. Why Choose Our Fellowship? ----------------- */
+.fellowship-why-section {
+  padding: 5.5rem 0;
+  background-color: #ffffff;
+}
+
+.why-choose-editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+}
+
+.why-choose-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 2rem 1.6rem;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.why-choose-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: 0 12px 30px rgba(0, 168, 181, 0.12);
+}
+
+.card-num-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.num-pill {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.num-line {
+  flex-grow: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.card-pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+}
+
+.card-pillar-desc {
+  font-size: 0.92rem;
+  color: var(--color-gray-text);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ----------------- 5. Training & Surgical Exposure ----------------- */
+.fellowship-exposure-section {
+  padding: 5.5rem 0;
+  background-color: #f1f5f9;
+}
+
+.exposure-tabs-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.75rem;
+  flex-wrap: wrap;
+}
+
+.exposure-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 700;
+  padding: 0.85rem 1.75rem;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.exposure-tab-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.exposure-tab-btn.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(11, 51, 102, 0.25);
+}
+
+.exposure-content-panel {
+  background: #ffffff;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+}
+
+.exposure-panel-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.panel-header-wrap {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.25rem;
+}
+
+.panel-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: rgba(0, 168, 181, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.panel-title {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.35rem;
+}
+
+.panel-subtitle {
+  font-size: 1rem;
+  color: var(--color-gray-text);
+  margin: 0;
+}
+
+.procedure-subgroup {
+  margin-bottom: 2rem;
+}
+
+.procedure-subgroup:last-child {
+  margin-bottom: 0;
+}
+
+.joint-category-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.85rem;
+}
+
+.title-bullet-icon {
+  color: var(--color-accent);
+}
+
+.procedure-items-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.procedure-item-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.93rem;
+  color: var(--color-text-main);
+  line-height: 1.5;
+}
+
+.dot-marker {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  margin-top: 0.45rem;
+  flex-shrink: 0;
+}
+
+.exposure-media-col {
+  position: sticky;
+  top: 100px;
+}
+
+.exposure-image-card {
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  background: #ffffff;
+}
+
+.exposure-card-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.exposure-card-footer {
+  padding: 1rem 1.25rem;
+  background-color: #ffffff;
+}
+
+.exposure-card-footer strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--color-primary);
+}
+
+.exposure-card-footer span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-gray-text);
+}
+
+/* ----------------- 6. Fellowship Mentor Section ----------------- */
+.fellowship-mentor-section {
+  padding: 5.5rem 0;
+  background-color: #ffffff;
+}
+
+.mentor-profile-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 4rem;
+  background: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: 3.5rem;
+  box-shadow: var(--shadow-sm);
+  align-items: center;
+}
+
+.mentor-photo-wrap {
+  position: relative;
+}
+
+.mentor-img-frame {
+  position: relative;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 4px solid #ffffff;
+}
+
+.mentor-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.mentor-badge-ribbon {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  background: rgba(7, 30, 61, 0.92);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.mentor-badge-ribbon svg {
+  color: #5eead4;
+}
+
+.mentor-name {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.mentor-creds {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.mentor-about-p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--color-gray-text);
+  margin-bottom: 1.25rem;
+}
+
+.mentor-key-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.mentor-stat-box {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-sm);
+  padding: 1rem 1.25rem;
+}
+
+.mentor-stat-box strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+}
+
+.mentor-stat-box span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-gray-text);
+  line-height: 1.4;
+}
+
+/* ----------------- 7. Fellow Candidates / Experiences ----------------- */
+.fellowship-candidates-section {
+  padding: 5.5rem 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.fellows-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.fellow-experience-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 2.25rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.fellow-experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(11, 51, 102, 0.1);
+  border-color: rgba(0, 168, 181, 0.4);
+}
+
+.fellow-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.fellow-avatar-frame {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-accent);
+  box-shadow: 0 4px 14px rgba(0, 168, 181, 0.25);
+  flex-shrink: 0;
+  background-color: #f1f5f9;
+}
+
+.fellow-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fellow-identity {
+  display: flex;
+  flex-direction: column;
+}
+
+.fellow-name {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.fellow-alias {
+  font-size: 0.8rem;
+  color: var(--color-gray-text);
+  margin-bottom: 0.15rem;
+}
+
+.fellow-qual {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.2rem;
+}
+
+.fellow-tenure-tag {
+  font-size: 0.74rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.fellow-achievement-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0, 168, 181, 0.08);
+  border: 1px solid rgba(0, 168, 181, 0.25);
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.fellow-achievement-pill svg {
+  color: var(--color-accent);
+}
+
+.fellow-quote-body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-glyph {
+  color: rgba(0, 168, 181, 0.25);
+  margin-bottom: 0.5rem;
+}
+
+.fellow-quote-body p {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: #334155;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ----------------- 8. Eligibility & Application ----------------- */
+.fellowship-apply-section {
+  padding: 5.5rem 0;
+  background-color: #f8fafc;
+}
+
+.apply-dual-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: stretch;
+}
+
+.eligibility-info-col {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-heading {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.apply-intro {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--color-gray-text);
+  margin-bottom: 2rem;
+}
+
+.eligibility-criteria-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.crit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.crit-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(0, 168, 181, 0.1);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.crit-item strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.crit-item p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--color-gray-text);
+  margin: 0;
+}
+
+/* Application Card */
+.apply-action-card {
+  background: linear-gradient(135deg, #071e3d 0%, #0b3366 100%);
+  color: #ffffff;
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-card-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #5eead4;
+  margin-bottom: 0.75rem;
+}
+
+.apply-card-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+}
+
+.apply-card-desc {
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 1.75rem;
+}
+
+.required-docs-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--border-radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.docs-title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #5eead4;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.required-docs-box ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #e2e8f0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.contact-action-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-top: auto;
+}
+
+.btn-apply-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.95rem 1.25rem;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 168, 181, 0.35);
+}
+
+.btn-apply-email:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+.helpline-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.helpline-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.helpline-item svg {
+  color: #5eead4;
+}
+
+.btn-enquire-online {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.btn-enquire-online:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+}
+
+/* ----------------- 9. FAQ Accordion ----------------- */
+.fellowship-faq-section {
+  padding: 5.5rem 0;
+  background-color: #ffffff;
+}
+
+.fellowship-accordion-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fellowship-accordion-item {
+  background: #ffffff;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fellowship-accordion-item:hover,
+.fellowship-accordion-item.open {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 18px rgba(0, 168, 181, 0.08);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.35rem 1.75rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+}
+
+.accordion-trigger:hover {
+  color: var(--color-accent);
+}
+
+.faq-chevron {
+  color: var(--color-accent);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: 0 1.75rem 1.35rem 1.75rem;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--color-gray-text);
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  padding-top: 0.85rem;
+}
+
+/* ----------------- 10. Tour / Visit Campus Banner ----------------- */
+.fellowship-bottom-cta {
+  padding: 3rem 0 6rem 0;
+  background-color: #ffffff;
+}
+
+.bottom-cta-banner {
+  background: linear-gradient(135deg, #071e3d 0%, #0c3366 100%);
+  color: #ffffff;
+  border-radius: var(--border-radius-lg);
+  padding: 3.5rem 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.banner-tag {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #5eead4;
+  margin-bottom: 0.6rem;
+}
+
+.bottom-cta-banner h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+
+.bottom-cta-banner p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0;
+}
+
+.cta-banner-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.btn-cta-light {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 168, 181, 0.3);
+}
+
+.btn-cta-light:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-cta-outline {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  transition: all 0.22s ease;
+}
+
+.btn-cta-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Breakpoints)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .info-strip-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .why-choose-editorial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .fellowship-hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-image-frame {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .overview-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .exposure-panel-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .exposure-media-col {
+    position: static;
+  }
+
+  .mentor-profile-card {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  .mentor-img-frame {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .mentor-key-highlights {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .fellows-cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .apply-dual-box {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .bottom-cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem;
+  }
+
+  .bottom-cta-banner p {
+    margin: 0 auto;
+  }
+
+  .cta-banner-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-strip-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .why-choose-editorial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-feature-pills {
+    grid-template-columns: 1fr;
+  }
+
+  .exposure-content-panel {
+    padding: 1.75rem;
+  }
+
+  .exposure-tabs-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .exposure-tab-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .fellowship-hero-metrics {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .hero-metric-divider {
+    display: none;
+  }
+
+  .eligibility-info-col,
+  .apply-action-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .fellowship-hero-section {
+    min-height: 380px;
+    padding: 3.5rem 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .fellowship-hero-section {
+    min-height: 300px;
+    padding: 2.75rem 0;
+  }
+
+  .fellowship-main-title {
+    font-size: clamp(1.8rem, 6.5vw, 2.3rem);
+  }
+
+  .fellowship-hero-sub {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .fellowship-hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .fellowship-btn-primary,
+  .fellowship-btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mentor-profile-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .mentor-highlight-item {
+    padding: 1rem;
+  }
+
+  .exposure-content-panel {
+    padding: 1.25rem 1rem;
+  }
+
+  .eligibility-info-col,
+  .apply-action-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .bottom-cta-banner {
+    padding: 2rem 1.25rem;
+  }
+
+  .cta-banner-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .btn-banner-primary,
+  .btn-banner-outline {
+    width: 100%;
+    justify-content: center;
+  }
+}
