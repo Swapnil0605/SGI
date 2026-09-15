@@ -1,4 +1,6 @@
-import React, { useRef, useMemo } from 'react';
+'use client';
+
+import React, { useRef, useMemo, useState, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float } from '@react-three/drei';
 import * as THREE from 'three';
@@ -140,6 +142,16 @@ function HealthParticles({ count = 120 }) {
 }
 
 export default function ThreeCanvas() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return <div className="three-canvas-container" aria-hidden="true" />;
+  }
+
   return (
     <div className="three-canvas-container" aria-hidden="true">
       <Canvas

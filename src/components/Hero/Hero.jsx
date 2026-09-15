@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, GraduationCap, Building, Award } from 'lucide-react';
 import './Hero.css';
 
@@ -38,7 +38,7 @@ export default function Hero({ heroRef, heroCardRef }) {
                 <ArrowRight size={18} className="btn-arrow" />
               </a>
               <Link
-                to="/contact#enquiry"
+                href="/contact#enquiry"
                 className="btn btn-outline-white hero-btn-sec"
               >
                 Apply Now

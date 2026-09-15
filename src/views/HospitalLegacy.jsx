@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ChevronRight,
   ArrowRight,
@@ -78,7 +78,7 @@ export default function HospitalLegacy({ openEnquiry }) {
         <div className="site-container">
           <ul className="legacy-breadcrumb-list">
             <li className="legacy-breadcrumb-item">
-              <Link to="/">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li className="legacy-breadcrumb-sep" aria-hidden="true">
               <ChevronRight size={14} />
@@ -115,7 +115,7 @@ export default function HospitalLegacy({ openEnquiry }) {
             </p>
 
             <Link
-              to="/contact#find-us"
+              href="/contact#find-us"
               className="legacy-hero-btn"
             >
               Visit Surannavar Hospital <ArrowRight size={16} />
@@ -341,7 +341,7 @@ export default function HospitalLegacy({ openEnquiry }) {
 
             <div className="college-portals-grid">
               
-              <Link to="/colleges/nursing" className="college-portal-card">
+              <Link href="/colleges/nursing" className="college-portal-card">
                 <div>
                   <span className="portal-tag">COLLEGE OF NURSING</span>
                   <h4 className="portal-title">Surannavar College of Nursing</h4>
@@ -351,7 +351,7 @@ export default function HospitalLegacy({ openEnquiry }) {
                 </span>
               </Link>
 
-              <Link to="/colleges/physiotherapy" className="college-portal-card">
+              <Link href="/colleges/physiotherapy" className="college-portal-card">
                 <div>
                   <span className="portal-tag">COLLEGE OF PHYSIOTHERAPY</span>
                   <h4 className="portal-title">Surannavar College of Physiotherapy</h4>
@@ -361,7 +361,7 @@ export default function HospitalLegacy({ openEnquiry }) {
                 </span>
               </Link>
 
-              <Link to="/colleges/allied-health" className="college-portal-card">
+              <Link href="/colleges/allied-health" className="college-portal-card">
                 <div>
                   <span className="portal-tag">ALLIED HEALTH SCIENCES</span>
                   <h4 className="portal-title">Surannavar College of Allied Health</h4>

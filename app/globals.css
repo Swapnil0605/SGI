@@ -1,0 +1,22 @@
+/* ==========================================================================
+   SURANNAVAR GROUP OF INSTITUTIONS - NEXT.JS GLOBAL STYLESHEET
+   ========================================================================== */
+
+@import "../src/index.css";
+@import "../src/components/Header/Header.css";
+@import "../src/components/Footer/Footer.css";
+@import "../src/components/Hero/Hero.css";
+@import "../src/components/ClinicalHeritage/ClinicalHeritage.css";
+@import "../src/components/Colleges/Colleges.css";
+@import "../src/components/AboutUs/AboutUs.css";
+@import "../src/components/WhyChooseUs/WhyChooseUs.css";
+@import "../src/components/StayConnected/StayConnected.css";
+@import "../src/components/VisionBand/VisionBand.css";
+@import "../src/components/Modals/Modals.css";
+@import "../src/views/About.css";
+@import "../src/views/NursingCollege.css";
+@import "../src/views/HospitalLegacy.css";
+@import "../src/views/Fellowship.css";
+@import "../src/views/Career.css";
+@import "../src/views/Gallery.css";
+@import "../src/views/Contact.css";

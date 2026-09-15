@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import './AboutUs.css';
 
@@ -55,7 +55,7 @@ export default function AboutUs({ aboutRef }) {
 
             <div className="about-cta-container">
               <Link
-                to="/about"
+                href="/about"
                 className="btn btn-primary"
               >
                 Find Out More About Us <ArrowRight size={18} />

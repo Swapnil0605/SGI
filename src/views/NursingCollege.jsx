@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ChevronRight,
   ChevronLeft,
@@ -17,14 +19,12 @@ import {
   Users,
   Brain,
   Microscope,
-  Landmark,
-  Activity,
-  Home
+  Landmark
 } from 'lucide-react';
 import './NursingCollege.css';
 
-export default function PhysiotherapyCollege({ openEnquiry }) {
-  const collegeName = 'Surannavar College of Physiotherapy';
+export default function NursingCollege({ openEnquiry }) {
+  const collegeName = 'Surannavar College of Nursing';
   const sliderRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -33,45 +33,51 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
   const careerDestinations = [
     {
       icon: Building2,
-      title: 'Hospitals & Clinics',
-      desc: 'Multispeciality hospitals, outpatient rehabilitation departments & trauma recovery clinics.',
-      tag: 'Clinical Practice'
+      title: 'Hospitals',
+      desc: 'Super-speciality hospitals, emergency units & multi-bed trauma care wards.',
+      tag: 'Hospital Healthcare'
     },
     {
-      icon: Activity,
-      title: 'Orthopedic Rehabilitation',
-      desc: 'Post-fracture recovery, joint replacements, sports injuries and musculoskeletal rehabilitation.',
-      tag: 'Orthopedic Specialty'
-    },
-    {
-      icon: Brain,
-      title: 'Neurological Rehabilitation',
-      desc: 'Stroke recovery, spinal cord injury rehab, Parkinson\'s management and motor control therapy.',
-      tag: 'Neuro Rehabilitation'
-    },
-    {
-      icon: Activity,
-      title: 'Sports & Fitness',
-      desc: 'Athletic training centers, sports franchises, fitness academies and sports injury management.',
-      tag: 'Sports Science'
+      icon: Stethoscope,
+      title: 'Clinical Care',
+      desc: 'Direct patient monitoring, preoperative assessment & surgical recovery.',
+      tag: 'Clinical Specialty'
     },
     {
       icon: HeartPulse,
-      title: 'Cardiorespiratory Care',
-      desc: 'ICUs, post-cardiac surgery recovery, pulmonary care and breathing rehabilitation programs.',
-      tag: 'Cardiopulmonary'
+      title: 'Child & Maternal Healthcare',
+      desc: 'Pediatric care units, maternity wings & neonatal intensive care (NICU).',
+      tag: 'Maternal & Child'
     },
     {
-      icon: Home,
-      title: 'Home & Community Care',
-      desc: 'Geriatric rehabilitation, home healthcare visits, ergonomic consulting and community wellness.',
-      tag: 'Community Care'
+      icon: Users,
+      title: 'Community Healthcare',
+      desc: 'Public health centers, primary clinics & rural outreach health initiatives.',
+      tag: 'Public Outreach'
+    },
+    {
+      icon: Brain,
+      title: 'Mental Health Services',
+      desc: 'Psychiatric rehabilitation centers, psychological counseling & holistic wellness.',
+      tag: 'Mental Health'
+    },
+    {
+      icon: Microscope,
+      title: 'Healthcare Research',
+      desc: 'Clinical trials, evidence-based nursing protocols & medical study initiatives.',
+      tag: 'Medical Research'
     },
     {
       icon: GraduationCap,
-      title: 'Education & Research',
-      desc: 'Academic faculty positions, movement science clinical research and postgraduate education.',
-      tag: 'Academia & Research'
+      title: 'Nursing Education',
+      desc: 'Academic faculties, nursing institutes, clinical tutor & mentorship roles.',
+      tag: 'Academia & Training'
+    },
+    {
+      icon: Landmark,
+      title: 'Healthcare Institutions',
+      desc: 'Government healthcare departments, public policy & international health organizations.',
+      tag: 'Healthcare Policy'
     }
   ];
 
@@ -120,19 +126,19 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
         <div className="site-container">
           <ul className="breadcrumb-list">
             <li className="breadcrumb-item">
-              <Link to="/">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li className="breadcrumb-sep" aria-hidden="true">
               <ChevronRight size={14} />
             </li>
             <li className="breadcrumb-item">
-              <Link to="/#colleges">Our Colleges</Link>
+              <Link href="/#colleges">Our Colleges</Link>
             </li>
             <li className="breadcrumb-sep" aria-hidden="true">
               <ChevronRight size={14} />
             </li>
             <li className="breadcrumb-item active" aria-current="page">
-              Surannavar College of Physiotherapy
+              Surannavar College of Nursing
             </li>
           </ul>
         </div>
@@ -141,8 +147,8 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
       {/* ----------------- 1. School Hero Banner ----------------- */}
       <section className="nursing-hero-banner">
         <img
-          src="/required pic/Physiotherapy_college.jpg"
-          alt="Surannavar College of Physiotherapy Campus"
+          src="/required pic/nursing_college.jpg"
+          alt="Surannavar College of Nursing Campus"
           className="nursing-hero-bg"
         />
         <div className="nursing-hero-overlay"></div>
@@ -154,7 +160,7 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
             </div>
             
             <h1 className="nursing-hero-title">
-              Surannavar College Of Physiotherapy
+              Surannavar College Of Nursing
             </h1>
           </div>
         </div>
@@ -168,7 +174,7 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
             {/* Left: Brand Name in Serif Italic */}
             <div className="school-faculty-brand">
               <span className="school-faculty-parent">Surannavar Group of Institutions</span>
-              <h2 className="school-faculty-title">College of Physiotherapy</h2>
+              <h2 className="school-faculty-title">College of Nursing</h2>
             </div>
 
             {/* Vertical Divider */}
@@ -178,23 +184,23 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
             <div className="school-faculty-info">
               <div className="school-faculty-meta">
                 <p className="school-faculty-tagline">
-                  Learn Movement. Restore Function. Make an Impact.
+                  Begin Your Journey in Professional Nursing
                 </p>
                 <div className="school-faculty-pill">
                   <span className="school-faculty-pulse" aria-hidden="true"></span>
-                  <span>Admissions Open (NEET not mandatory for 2026–27)</span>
+                  <span>Admissions Open 2026–27</span>
                 </div>
               </div>
 
               <div className="school-faculty-actions">
                 <Link
-                  to="/contact#enquiry"
+                  href="/contact#enquiry"
                   className="school-faculty-btn-primary"
                 >
                   Apply Now <ArrowRight size={15} />
                 </Link>
                 <Link
-                  to="/contact#enquiry"
+                  href="/contact#enquiry"
                   className="school-faculty-btn-secondary"
                 >
                   Enquire Now
@@ -209,18 +215,18 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
       {/* ----------------- 2. About College Section ----------------- */}
       <section className="nursing-about-section">
         <div className="site-container nursing-about-container">
-          <span className="section-eyebrow">EXCELLENCE IN REHABILITATION & MOVEMENT SCIENCE</span>
+          <span className="section-eyebrow">EXCELLENCE IN HEALTHCARE EDUCATION</span>
           <h2 className="nursing-about-title">
-            Where the Science of Movement Meets Patient Care
+            A Strong Foundation for a Career in Nursing
           </h2>
           <div className="nursing-accent-bar" aria-hidden="true"></div>
 
           <div className="nursing-about-body">
             <p className="nursing-lead-para">
-              Physiotherapy combines knowledge of the human body with assessment, rehabilitation and hands-on clinical practice. At Surannavar College of Physiotherapy, students develop the skills needed to understand movement, support recovery and contribute to patient care.
+              B.Sc. Nursing combines healthcare knowledge, clinical skills and compassionate patient care. At Surannavar College of Nursing, students develop the knowledge and practical capabilities needed to grow into confident healthcare professionals.
             </p>
             <p className="nursing-secondary-para">
-              Through academic learning, practical training and clinical experience, students build the confidence to progress towards a professional career in physiotherapy.
+              Through academic learning, practical training and clinical experience, students are prepared to understand patient needs and contribute effectively to healthcare delivery.
             </p>
           </div>
         </div>
@@ -235,24 +241,24 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
               <div className="stat-icon-wrap">
                 <Clock size={44} strokeWidth={1.6} className="stat-strip-icon" />
               </div>
-              <h3 className="stat-value">4 + 1 Years</h3>
-              <p className="stat-desc">4 years of academic study followed by 1 year of internship</p>
+              <h3 className="stat-value">4 Years</h3>
+              <p className="stat-desc">Duration of the B.Sc. Nursing programme</p>
             </div>
 
             <div className="stat-column">
               <div className="stat-icon-wrap">
                 <BookOpen size={44} strokeWidth={1.6} className="stat-strip-icon" />
               </div>
-              <h3 className="stat-value">50% PCB</h3>
-              <p className="stat-desc">Eligibility for 12th / PUC Science students</p>
+              <h3 className="stat-value">45% PCB</h3>
+              <p className="stat-desc">Minimum eligibility for 12th / PUC Science students</p>
             </div>
 
             <div className="stat-column">
               <div className="stat-icon-wrap">
-                <Activity size={44} strokeWidth={1.6} className="stat-strip-icon" />
+                <GraduationCap size={44} strokeWidth={1.6} className="stat-strip-icon" />
               </div>
-              <h3 className="stat-value">Practical Learning</h3>
-              <p className="stat-desc">Develop hands-on skills in assessment and rehabilitation</p>
+              <h3 className="stat-value">RGUHS</h3>
+              <p className="stat-desc">Affiliated to Rajiv Gandhi University of Health Sciences</p>
             </div>
 
           </div>
@@ -266,25 +272,25 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
           <div className="explore-header-area">
             <span className="section-eyebrow">ACADEMIC & CLINICAL IMMERSION</span>
             <h2 className="explore-section-title">
-              Experience Excellence at Surannavar Physiotherapy
+              Experience Excellence at Surannavar Nursing
             </h2>
           </div>
 
           <div className="explore-cards-grid">
             
-            {/* Card 1: Study Physiotherapy */}
+            {/* Card 1: Study Nursing */}
             <div className="explore-pillar-card">
               <div className="card-media-wrap">
                 <img
-                  src="/required pic/Learn_Through_Practice.png"
-                  alt="Students studying physiotherapy assessment and anatomy"
-                  className="card-media-img"
+                  src="/required pic/Study_Nursing.webp"
+                  alt="Students studying B.Sc Nursing"
+                  className="card-media-img card-media-img-study"
                 />
               </div>
               <div className="card-content-wrap">
-                <h3 className="card-pillar-title">Study Physiotherapy</h3>
+                <h3 className="card-pillar-title">Study Nursing</h3>
                 <p className="card-pillar-desc">
-                  Explore the BPT programme, eligibility, curriculum and admission information.
+                  Explore the B.Sc. Nursing programme, eligibility, curriculum and admission information.
                 </p>
               </div>
             </div>
@@ -293,15 +299,15 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
             <div className="explore-pillar-card">
               <div className="card-media-wrap">
                 <img
-                  src="/required pic/Campus_Faculty_section.jpg"
-                  alt="Clinical simulation and rehabilitation therapy practice"
+                  src="/required pic/Learn_Through_Practice.png"
+                  alt="Clinical simulation and nursing practice"
                   className="card-media-img"
                 />
               </div>
               <div className="card-content-wrap">
                 <h3 className="card-pillar-title">Learn Through Practice</h3>
                 <p className="card-pillar-desc">
-                  Develop hands-on skills through practical learning, assessment and rehabilitation training.
+                  Discover how practical training, nursing laboratories and clinical learning complement classroom education.
                 </p>
               </div>
             </div>
@@ -311,14 +317,14 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
               <div className="card-media-wrap">
                 <img
                   src="/required pic/Build_Your_Career.png"
-                  alt="Physiotherapy graduates building healthcare careers"
+                  alt="Nursing graduates building global healthcare careers"
                   className="card-media-img"
                 />
               </div>
               <div className="card-content-wrap">
                 <h3 className="card-pillar-title">Build Your Career</h3>
                 <p className="card-pillar-desc">
-                  Discover career opportunities across hospitals, rehabilitation and other healthcare settings.
+                  Understand the career pathways and opportunities available to nursing graduates.
                 </p>
               </div>
             </div>
@@ -336,10 +342,10 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
             <div className="careers-header-text">
               <span className="section-eyebrow">PROFESSIONAL HORIZONS</span>
               <h2 className="careers-section-title">
-                Where Can BPT Degree Take You?
+                Where Can B.Sc. Nursing Take You?
               </h2>
               <p className="careers-lead-text">
-                After completing BPT, graduates can explore opportunities in:
+                After completing B.Sc. Nursing, graduates can explore diverse, rewarding opportunities across healthcare:
               </p>
             </div>
 
@@ -419,7 +425,7 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
               Your Passion. Our Guidance. A Healthier Tomorrow.
             </h3>
             <p className="contact-banner-desc">
-              Take the first step toward a prestigious career in professional physiotherapy. Our admissions team and academic advisors are here to support your journey.
+              Take the first step toward a prestigious career in professional nursing. Our admissions team and academic advisors are here to support your journey.
             </p>
           </div>
 
@@ -436,7 +442,7 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
                 Have questions about admissions? Our counsellors are here to help you with eligibility, documentation, and course details.
               </p>
               <Link
-                to="/contact#enquiry"
+                href="/contact#enquiry"
                 className="contact-card-btn"
               >
                 Speak with Counsellor <ArrowRight size={14} />
@@ -450,10 +456,10 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
               </div>
               <h4>Visit Us</h4>
               <p>
-                Surannavar College of Physiotherapy Campus, Near Surannavar Superspeciality Hospital, Belagavi, Karnataka 590001, India.
+                Surannavar College of Nursing Campus, Near Surannavar Superspeciality Hospital, Belagavi, Karnataka 590001, India.
               </p>
               <Link
-                to="/contact#find-us"
+                href="/contact#find-us"
                 className="contact-card-btn"
               >
                 Campus Location <ArrowRight size={14} />

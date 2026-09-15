@@ -1,9 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, ChevronUp } from 'lucide-react';
-import './Footer.css';
+'use client';
 
-export default function Footer({ openEnquiry, scrollToTop }) {
+import React from 'react';
+import Link from 'next/link';
+import { MapPin, Phone, Mail, ChevronUp } from 'lucide-react';
+import { useModal } from '../../../context/ModalContext';
+
+export default function Footer({ openEnquiry: propOpenEnquiry, scrollToTop }) {
+  const modalContext = useModal();
+  const openEnquiry = propOpenEnquiry || modalContext?.openEnquiry;
+
   const handleScrollToTop = () => {
     if (scrollToTop) {
       scrollToTop();
@@ -21,7 +26,7 @@ export default function Footer({ openEnquiry, scrollToTop }) {
           {/* Col 1: Brand & Contact */}
           <div className="footer-col col-main">
             <div className="footer-brand">
-              <Link to="/" aria-label="Surannavar Group Home">
+              <Link href="/" aria-label="Surannavar Group Home">
                 <img
                   src="/required pic/main_logo_cropped.png"
                   alt="Surannavar Group"
@@ -52,12 +57,12 @@ export default function Footer({ openEnquiry, scrollToTop }) {
           <div className="footer-col">
             <h4 className="footer-col-title">Our Colleges</h4>
             <ul className="footer-links">
-              <li><Link to="/colleges/nursing">Surannavar College of Nursing</Link></li>
-              <li><Link to="/colleges/physiotherapy">Surannavar College of Physiotherapy</Link></li>
-              <li><Link to="/colleges/allied-health">Surannavar College of Allied Health Sciences</Link></li>
-              <li><Link to="/colleges/nursing">B.Sc Nursing (4 Years)</Link></li>
-              <li><Link to="/colleges/physiotherapy">Bachelor of Physiotherapy (BPT)</Link></li>
-              <li><Link to="/colleges/allied-health">B.Sc Allied Health Sciences</Link></li>
+              <li><Link href="/colleges/nursing">Surannavar College of Nursing</Link></li>
+              <li><Link href="/colleges/physiotherapy">Surannavar College of Physiotherapy</Link></li>
+              <li><Link href="/colleges/allied-health">Surannavar College of Allied Health Sciences</Link></li>
+              <li><Link href="/colleges/nursing">B.Sc Nursing (4 Years)</Link></li>
+              <li><Link href="/colleges/physiotherapy">Bachelor of Physiotherapy (BPT)</Link></li>
+              <li><Link href="/colleges/allied-health">B.Sc Allied Health Sciences</Link></li>
             </ul>
           </div>
 
@@ -66,16 +71,16 @@ export default function Footer({ openEnquiry, scrollToTop }) {
             <h4 className="footer-col-title">Admissions 2026–27</h4>
             <ul className="footer-links">
               <li>
-                <Link to="/contact#enquiry" className="footer-link-btn">
+                <Link href="/contact#enquiry" className="footer-link-btn">
                   Online Application
                 </Link>
               </li>
-              <li><Link to="/about">About Institutions & Leadership</Link></li>
-              <li><a href="/#why-choose">Clinical Facilities & Labs</a></li>
-              <li><Link to="/hospital-legacy">Hospital Rotations</Link></li>
-              <li><Link to="/fellowship">Fellowship Program</Link></li>
-              <li><Link to="/gallery">Campus & Clinical Gallery</Link></li>
-              <li><Link to="/contact#contact">Contact & Campuses</Link></li>
+              <li><Link href="/about">About Institutions & Leadership</Link></li>
+              <li><Link href="/#why-choose">Clinical Facilities & Labs</Link></li>
+              <li><Link href="/hospital">Hospital Rotations</Link></li>
+              <li><Link href="/fellowship">Fellowship Program</Link></li>
+              <li><Link href="/gallery">Campus & Clinical Gallery</Link></li>
+              <li><Link href="/contact#contact">Contact & Campuses</Link></li>
             </ul>
           </div>
 

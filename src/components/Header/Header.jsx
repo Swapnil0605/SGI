@@ -1,17 +1,26 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import './Header.css';
+import { useModal } from '../../../context/ModalContext';
 
 export default function Header({
-  isMobileMenuOpen,
-  setIsMobileMenuOpen,
-  openEnquiry
+  isMobileMenuOpen: propIsMobileMenuOpen,
+  setIsMobileMenuOpen: propSetIsMobileMenuOpen,
+  openEnquiry: propOpenEnquiry
 }) {
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const pathname = usePathname() || '/';
+  const modalContext = useModal();
+  const openEnquiry = propOpenEnquiry || modalContext?.openEnquiry;
+
+  const [localIsMobileMenuOpen, setLocalIsMobileMenuOpen] = useState(false);
+  const isMobileMenuOpen = propIsMobileMenuOpen !== undefined ? propIsMobileMenuOpen : localIsMobileMenuOpen;
+  const setIsMobileMenuOpen = propSetIsMobileMenuOpen || setLocalIsMobileMenuOpen;
+
   const [isMobileCollegesOpen, setIsMobileCollegesOpen] = useState(
-    location.pathname.startsWith('/colleges')
+    pathname.startsWith('/colleges')
   );
   const [isDesktopCollegesOpen, setIsDesktopCollegesOpen] = useState(false);
 
@@ -19,17 +28,17 @@ export default function Header({
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsDesktopCollegesOpen(false);
-    if (!location.pathname.startsWith('/colleges')) {
+    if (!pathname.startsWith('/colleges')) {
       setIsMobileCollegesOpen(false);
     }
-  }, [location.pathname]);
+  }, [pathname]);
 
   return (
     <header className="header-wrapper" id="site-header">
       {/* Main Navbar */}
       <div className="main-navbar">
         <div className="site-container nav-flex">
-          <Link to="/" className="brand-link" aria-label="Surannavar Group Home">
+          <Link href="/" className="brand-link" aria-label="Surannavar Group Home">
             <img
               src="/required pic/new_logo.png"
               alt="Surannavar Group of Institutions Logo"
@@ -41,10 +50,10 @@ export default function Header({
           <nav className="primary-nav" aria-label="Main navigation">
             <ul className="nav-list">
               <li className="nav-item">
-                <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>
+                <Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
               </li>
               <li className="nav-item">
-                <Link to="/about" className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}>About</Link>
+                <Link href="/about" className={`nav-link ${pathname === '/about' ? 'active' : ''}`}>About</Link>
               </li>
               <li 
                 className={`nav-item has-dropdown ${isDesktopCollegesOpen ? 'open' : ''}`}
@@ -53,7 +62,7 @@ export default function Header({
               >
                 <button
                   type="button"
-                  className={`nav-link dropdown-toggle-btn ${location.pathname.startsWith('/colleges') ? 'active' : ''}`}
+                  className={`nav-link dropdown-toggle-btn ${pathname.startsWith('/colleges') ? 'active' : ''}`}
                   onClick={() => setIsDesktopCollegesOpen(!isDesktopCollegesOpen)}
                   aria-expanded={isDesktopCollegesOpen}
                   aria-haspopup="true"
@@ -61,45 +70,45 @@ export default function Header({
                   Colleges <ChevronDown size={14} className={`dropdown-chevron ${isDesktopCollegesOpen ? 'rotate' : ''}`} />
                 </button>
                 <div className={`dropdown-menu ${isDesktopCollegesOpen ? 'show' : ''}`}>
-                  <Link to="/colleges/nursing" className="dropdown-link" onClick={() => setIsDesktopCollegesOpen(false)}>
+                  <Link href="/colleges/nursing" className="dropdown-link" onClick={() => setIsDesktopCollegesOpen(false)}>
                     <strong>Surannavar College of Nursing</strong>
                     <span>B.Sc, Post-Basic & M.Sc Nursing</span>
                   </Link>
-                  <Link to="/colleges/physiotherapy" className="dropdown-link" onClick={() => setIsDesktopCollegesOpen(false)}>
+                  <Link href="/colleges/physiotherapy" className="dropdown-link" onClick={() => setIsDesktopCollegesOpen(false)}>
                     <strong>Surannavar College of Physiotherapy</strong>
                     <span>BPT Rehabilitation & Movement Science</span>
                   </Link>
-                  <Link to="/colleges/allied-health" className="dropdown-link" onClick={() => setIsDesktopCollegesOpen(false)}>
+                  <Link href="/colleges/allied-health" className="dropdown-link" onClick={() => setIsDesktopCollegesOpen(false)}>
                     <strong>Surannavar College of Allied Health Sciences</strong>
                     <span>Lab Tech, Radiology & OT Technology</span>
                   </Link>
                 </div>
               </li>
               <li className="nav-item">
-                <Link to="/hospital-legacy" className={`nav-link ${location.pathname === '/hospital-legacy' ? 'active' : ''}`}>Hospital Legacy</Link>
+                <Link href="/hospital" className={`nav-link ${pathname === '/hospital' ? 'active' : ''}`}>Hospital Legacy</Link>
               </li>
               <li className="nav-item">
-                <Link to="/fellowship" className={`nav-link ${location.pathname === '/fellowship' ? 'active' : ''}`}>Fellowship</Link>
+                <Link href="/fellowship" className={`nav-link ${pathname === '/fellowship' ? 'active' : ''}`}>Fellowship</Link>
               </li>
               <li className="nav-item">
-                <Link to="/career" className={`nav-link ${location.pathname.startsWith('/career') ? 'active' : ''}`}>Career</Link>
+                <Link href="/career" className={`nav-link ${pathname.startsWith('/career') ? 'active' : ''}`}>Career</Link>
               </li>
               <li className="nav-item">
-                <Link to="/gallery" className={`nav-link ${location.pathname === '/gallery' ? 'active' : ''}`}>Gallery</Link>
+                <Link href="/gallery" className={`nav-link ${pathname === '/gallery' ? 'active' : ''}`}>Gallery</Link>
               </li>
               <li className="nav-item">
-                <Link to="/contact" className={`nav-link ${location.pathname.startsWith('/contact') ? 'active' : ''}`}>Contact</Link>
+                <Link href="/contact" className={`nav-link ${pathname.startsWith('/contact') ? 'active' : ''}`}>Contact</Link>
               </li>
               <li className="nav-item visit-hospital-item">
-  <a
-    href="https://surannavarhospital.in/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="visit-hospital-btn"
-  >
-    Visit Hospital
-  </a>
-</li>
+                <a
+                  href="https://surannavarhospital.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="visit-hospital-btn"
+                >
+                  Visit Hospital
+                </a>
+              </li>
             </ul>
           </nav>
 
@@ -132,15 +141,15 @@ export default function Header({
         </div>
         <nav className="mobile-nav-links">
           <Link
-            to="/"
-            className={`mob-link ${location.pathname === '/' ? 'active' : ''}`}
+            href="/"
+            className={`mob-link ${pathname === '/' ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Home
           </Link>
           <Link
-            to="/about"
-            className={`mob-link ${location.pathname === '/about' ? 'active' : ''}`}
+            href="/about"
+            className={`mob-link ${pathname === '/about' ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
@@ -150,7 +159,7 @@ export default function Header({
           <div className="mob-dropdown-wrap">
             <button
               type="button"
-              className={`mob-link mob-dropdown-trigger ${location.pathname.startsWith('/colleges') ? 'active' : ''} ${isMobileCollegesOpen ? 'expanded' : ''}`}
+              className={`mob-link mob-dropdown-trigger ${pathname.startsWith('/colleges') ? 'active' : ''} ${isMobileCollegesOpen ? 'expanded' : ''}`}
               onClick={() => setIsMobileCollegesOpen(!isMobileCollegesOpen)}
               aria-expanded={isMobileCollegesOpen}
             >
@@ -162,8 +171,8 @@ export default function Header({
             </button>
             <div className={`mob-dropdown-content ${isMobileCollegesOpen ? 'open' : ''}`}>
               <Link
-                to="/colleges/nursing"
-                className={`mob-sublink-item ${location.pathname === '/colleges/nursing' ? 'active' : ''}`}
+                href="/colleges/nursing"
+                className={`mob-sublink-item ${pathname === '/colleges/nursing' ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="mob-sublink-bullet"></div>
@@ -173,8 +182,8 @@ export default function Header({
                 </div>
               </Link>
               <Link
-                to="/colleges/physiotherapy"
-                className={`mob-sublink-item ${location.pathname === '/colleges/physiotherapy' ? 'active' : ''}`}
+                href="/colleges/physiotherapy"
+                className={`mob-sublink-item ${pathname === '/colleges/physiotherapy' ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="mob-sublink-bullet"></div>
@@ -184,8 +193,8 @@ export default function Header({
                 </div>
               </Link>
               <Link
-                to="/colleges/allied-health"
-                className={`mob-sublink-item ${location.pathname === '/colleges/allied-health' ? 'active' : ''}`}
+                href="/colleges/allied-health"
+                className={`mob-sublink-item ${pathname === '/colleges/allied-health' ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="mob-sublink-bullet"></div>
@@ -198,43 +207,43 @@ export default function Header({
           </div>
 
           <Link
-            to="/hospital-legacy"
-            className={`mob-link ${location.pathname === '/hospital-legacy' ? 'active' : ''}`}
+            href="/hospital"
+            className={`mob-link ${pathname === '/hospital' ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Hospital Legacy
           </Link>
           <Link
-            to="/fellowship"
-            className={`mob-link ${location.pathname === '/fellowship' ? 'active' : ''}`}
+            href="/fellowship"
+            className={`mob-link ${pathname === '/fellowship' ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Fellowship
           </Link>
           <Link
-            to="/career"
-            className={`mob-link ${location.pathname.startsWith('/career') ? 'active' : ''}`}
+            href="/career"
+            className={`mob-link ${pathname.startsWith('/career') ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Career
           </Link>
           <Link
-            to="/gallery"
-            className={`mob-link ${location.pathname === '/gallery' ? 'active' : ''}`}
+            href="/gallery"
+            className={`mob-link ${pathname === '/gallery' ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Gallery
           </Link>
           <Link
-            to="/contact"
-            className={`mob-link ${location.pathname.startsWith('/contact') ? 'active' : ''}`}
+            href="/contact"
+            className={`mob-link ${pathname.startsWith('/contact') ? 'active' : ''}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
           </Link>
           <div className="mobile-nav-cta">
             <Link
-              to="/contact#enquiry"
+              href="/contact#enquiry"
               className="btn btn-primary btn-block"
               onClick={() => setIsMobileMenuOpen(false)}
             >

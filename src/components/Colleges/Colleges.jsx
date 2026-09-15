@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import './Colleges.css';
 
@@ -39,7 +39,7 @@ export default function Colleges({ collegesGridRef, openEnquiry }) {
             <div className="card-body">
               <span className="card-category">COLLEGE OF NURSING</span>
               <h3 className="card-title">
-                <Link to="/colleges/nursing">Surannavar College of Nursing</Link>
+                <Link href="/colleges/nursing">Surannavar College of Nursing</Link>
               </h3>
               <p className="card-description">
                 Build a strong foundation in nursing through healthcare knowledge, clinical skills and patient-centred care. Prepare to serve with confidence, competence and compassion.
@@ -51,7 +51,7 @@ export default function Colleges({ collegesGridRef, openEnquiry }) {
               </div>
               <div className="card-footer-link">
                 <Link
-                  to="/colleges/nursing"
+                  href="/colleges/nursing"
                   className="editorial-card-btn"
                 >
                   Explore College & Programmes <ArrowRight size={14} />
@@ -83,7 +83,7 @@ export default function Colleges({ collegesGridRef, openEnquiry }) {
               </div>
               <div className="card-footer-link">
                 <Link
-                  to="/colleges/physiotherapy"
+                  href="/colleges/physiotherapy"
                   className="editorial-card-btn"
                 >
                   Explore College & Programmes <ArrowRight size={14} />
@@ -115,7 +115,7 @@ export default function Colleges({ collegesGridRef, openEnquiry }) {
               </div>
               <div className="card-footer-link">
                 <Link
-                  to="/colleges/allied-health"
+                  href="/colleges/allied-health"
                   className="editorial-card-btn"
                 >
                   Explore College & Programmes <ArrowRight size={14} />

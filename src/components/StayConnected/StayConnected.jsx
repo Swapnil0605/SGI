@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import './StayConnected.css';
 
 export default function StayConnected({ ctaBannerRef }) {
@@ -14,13 +14,13 @@ export default function StayConnected({ ctaBannerRef }) {
           </p>
           <div className="cta-action-buttons">
             <Link
-              to="/contact#enquiry"
+              href="/contact#enquiry"
               className="btn-cta-enquire"
             >
               Enquire Now
             </Link>
             <Link
-              to="/contact#contact"
+              href="/contact#contact"
               className="btn-cta-contact"
             >
               Contact Us

@@ -23,15 +23,22 @@
   gap: 1.25rem;
 }
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .footer-logo {
   filter: brightness(0) invert(1);
   height: 56px;
   width: auto;
+  margin-bottom: 0.25rem;
 }
 
 .footer-tagline {
   font-size: 0.9rem;
-  line-height: 1.6;
+  line-height: 1.65;
   color: #94a3b8;
 }
 

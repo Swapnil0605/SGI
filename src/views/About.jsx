@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ArrowRight,
   CheckCircle2,
@@ -19,7 +19,7 @@ export default function About({ openEnquiry }) {
         <div className="site-container">
           <ul className="breadcrumb-list">
             <li className="breadcrumb-item">
-              <Link to="/">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li className="breadcrumb-sep" aria-hidden="true">
               <ChevronRight size={14} />
@@ -334,12 +334,12 @@ export default function About({ openEnquiry }) {
           </p>
           <div className="about-cta-buttons">
             <Link
-              to="/contact#enquiry"
+              href="/contact#enquiry"
               className="btn btn-primary"
             >
-              Apply for Admissions 2026–27 <ArrowRight size={16} />
+              Apply for Admissions 2026–27
             </Link>
-            <Link to="/#colleges" className="btn btn-outline-white">
+            <Link href="/#colleges" className="btn btn-outline-white">
               Explore Programmes
             </Link>
           </div>

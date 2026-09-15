@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ChevronRight,
   Phone,
@@ -350,7 +352,7 @@ export default function Contact() {
         <div className="site-container">
           <ul className="contact-breadcrumb-list">
             <li className="contact-breadcrumb-item">
-              <Link to="/">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li className="contact-breadcrumb-sep" aria-hidden="true">
               <ChevronRight size={14} />

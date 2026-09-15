@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ChevronRight,
   Sparkles,
@@ -149,7 +151,7 @@ export default function Career() {
       <nav className="career-breadcrumbs-bar" aria-label="Breadcrumb">
         <div className="site-container">
           <ul className="career-breadcrumb-list">
-            <li><Link to="/">Home</Link></li>
+            <li><Link href="/">Home</Link></li>
             <li aria-hidden="true"><ChevronRight size={14} /></li>
             <li className="active" aria-current="page">Careers</li>
           </ul>
@@ -347,7 +349,7 @@ export default function Career() {
                 >
                   <Send size={16} /> Email Your Resume
                 </a>
-                <Link to="/contact#enquiry" className="btn-apply-form-secondary">
+                <Link href="/contact#enquiry" className="btn-apply-form-secondary">
                   Open Contact & Enquiry Form
                 </Link>
               </div>

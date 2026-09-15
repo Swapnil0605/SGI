@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ChevronRight,
   Sparkles,
@@ -255,12 +257,12 @@ export default function Fellowship({ openEnquiry }) {
       {/* ----------------- Breadcrumb Bar ----------------- */}
       <nav className="fellowship-breadcrumbs" aria-label="Breadcrumb">
         <div className="site-container">
-          <ul className="breadcrumb-trail">
-            <li><Link to="/">Home</Link></li>
-            <li aria-hidden="true"><ChevronRight size={14} /></li>
-            <li><Link to="/hospital-legacy">Hospital Legacy</Link></li>
-            <li aria-hidden="true"><ChevronRight size={14} /></li>
-            <li className="active" aria-current="page">Fellowship in Arthroscopy & Arthroplasty</li>
+          <ul className="fellowship-breadcrumb-list">
+            <li><Link href="/">Home</Link></li>
+            <li><ChevronRight size={13} /></li>
+            <li><Link href="/hospital">Hospital Legacy</Link></li>
+            <li><ChevronRight size={13} /></li>
+            <li className="active">Fellowship Program</li>
           </ul>
         </div>
       </nav>
@@ -730,8 +732,8 @@ export default function Fellowship({ openEnquiry }) {
                 </div>
 
                 <Link
-                  to="/contact#enquiry"
-                  className="btn-enquire-online"
+                  href="/contact#enquiry"
+                  className="eligibility-apply-btn"
                 >
                   Submit Online Inquiry
                 </Link>
@@ -803,8 +805,8 @@ export default function Fellowship({ openEnquiry }) {
               >
                 Send Direct Email <ArrowRight size={16} />
               </a>
-              <Link to="/contact#find-us" className="btn-cta-outline">
-                Locate Hospital
+              <Link href="/contact#find-us" className="btn-cta-outline">
+                Visit Campus / Hospital
               </Link>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Activity, Stethoscope, Award, CheckCircle2, ArrowRight } from 'lucide-react';
 import './ClinicalHeritage.css';
 
@@ -140,7 +140,7 @@ export default function ClinicalHeritage({ excellenceRef }) {
               <div className="pathway-footer-row">
                 <span className="pathway-stage-badge">Pathway: 01 → 02 → 03 → 04</span>
                 <Link
-                  to="/hospital-legacy"
+                  href="/hospital"
                   className="btn-editorial-cta"
                 >
                   Discover Our Story <ArrowRight size={16} />

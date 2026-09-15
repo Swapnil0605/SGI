@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ChevronRight,
   Sparkles,
@@ -152,7 +154,7 @@ export default function Gallery() {
         <div className="site-container">
           <ul className="gallery-breadcrumb-list">
             <li className="gallery-breadcrumb-item">
-              <Link to="/">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li className="gallery-breadcrumb-sep" aria-hidden="true">
               <ChevronRight size={14} />
@@ -225,10 +227,10 @@ export default function Gallery() {
               </p>
             </div>
             <div className="gallery-cta-actions">
-              <Link to="/contact#find-us" className="btn-gallery-primary">
-                View Campus Location <ArrowRight size={16} />
+              <Link href="/contact#find-us" className="btn-gallery-primary">
+                Schedule a Campus Visit <ArrowRight size={16} />
               </Link>
-              <Link to="/contact#enquiry" className="btn-gallery-secondary">
+              <Link href="/contact#enquiry" className="btn-gallery-secondary">
                 Enquire for Admissions
               </Link>
             </div>

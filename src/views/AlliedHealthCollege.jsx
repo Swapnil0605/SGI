@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ChevronRight,
   ChevronLeft,
@@ -115,13 +117,13 @@ export default function AlliedHealthCollege({ openEnquiry }) {
         <div className="site-container">
           <ul className="breadcrumb-list">
             <li className="breadcrumb-item">
-              <Link to="/">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li className="breadcrumb-sep" aria-hidden="true">
               <ChevronRight size={14} />
             </li>
             <li className="breadcrumb-item">
-              <Link to="/#colleges">Our Colleges</Link>
+              <Link href="/#colleges">Our Colleges</Link>
             </li>
             <li className="breadcrumb-sep" aria-hidden="true">
               <ChevronRight size={14} />
@@ -183,13 +185,13 @@ export default function AlliedHealthCollege({ openEnquiry }) {
 
               <div className="school-faculty-actions">
                 <Link
-                  to="/contact#enquiry"
+                  href="/contact#enquiry"
                   className="school-faculty-btn-primary"
                 >
                   Apply Now <ArrowRight size={15} />
                 </Link>
                 <Link
-                  to="/contact#enquiry"
+                  href="/contact#enquiry"
                   className="school-faculty-btn-secondary"
                 >
                   Enquire Now
@@ -431,7 +433,7 @@ export default function AlliedHealthCollege({ openEnquiry }) {
                 Have questions about admissions? Our counsellors are here to help you with eligibility, documentation, and course details.
               </p>
               <Link
-                to="/contact#enquiry"
+                href="/contact#enquiry"
                 className="contact-card-btn"
               >
                 Speak with Counsellor <ArrowRight size={14} />
@@ -445,10 +447,10 @@ export default function AlliedHealthCollege({ openEnquiry }) {
               </div>
               <h4>Visit Us</h4>
               <p>
-                Surannavar College of Allied Health Sciences Campus, Near Surannavar Superspeciality Hospital, Belagavi, Karnataka 590001, India.
+                Surannavar College of Allied Health Sciences, Near Surannavar Superspeciality Hospital, Belagavi, Karnataka 590001, India.
               </p>
               <Link
-                to="/contact#find-us"
+                href="/contact#find-us"
                 className="contact-card-btn"
               >
                 Campus Location <ArrowRight size={14} />
