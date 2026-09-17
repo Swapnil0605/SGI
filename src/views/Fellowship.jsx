@@ -257,12 +257,12 @@ export default function Fellowship({ openEnquiry }) {
       {/* ----------------- Breadcrumb Bar ----------------- */}
       <nav className="fellowship-breadcrumbs" aria-label="Breadcrumb">
         <div className="site-container">
-          <ul className="fellowship-breadcrumb-list">
+          <ul className="breadcrumb-trail">
             <li><Link href="/">Home</Link></li>
-            <li><ChevronRight size={13} /></li>
+            <li aria-hidden="true"><ChevronRight size={14} /></li>
             <li><Link href="/hospital">Hospital Legacy</Link></li>
-            <li><ChevronRight size={13} /></li>
-            <li className="active">Fellowship Program</li>
+            <li aria-hidden="true"><ChevronRight size={14} /></li>
+            <li className="active" aria-current="page">Fellowship in Arthroscopy & Arthroplasty</li>
           </ul>
         </div>
       </nav>
