@@ -299,12 +299,12 @@ export default function Career() {
                 </div>
 
                 <div className="job-card-footer">
-                  <a
-                    href={`mailto:dr.jsconprincipal@gmail.com?subject=Application for ${encodeURIComponent(job.title)}`}
+                  <Link
+                    href={`/contact?role=${encodeURIComponent(job.title)}#enquiry`}
                     className="btn-job-apply"
                   >
                     Apply for Position <ArrowRight size={15} />
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
