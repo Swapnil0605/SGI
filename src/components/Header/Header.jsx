@@ -37,7 +37,8 @@ export default function Header({
     <header className="header-wrapper" id="site-header">
       {/* Main Navbar */}
       <div className="main-navbar">
-        <div className="site-container nav-flex">
+        <div className="site-container">
+          <div className="nav-flex">
           <Link href="/" className="brand-link" aria-label="Surannavar Group Home">
             <img
               src="/required pic/new_logo.png"
@@ -122,6 +123,7 @@ export default function Header({
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
+          </div>
           </div>
         </div>
       </div>

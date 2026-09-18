@@ -270,7 +270,8 @@ export default function Fellowship({ openEnquiry }) {
       {/* ----------------- 1. Fellowship Hero Section ----------------- */}
       <section className="fellowship-hero-section">
         <div className="fellowship-hero-bg-overlay" />
-        <div className="site-container fellowship-hero-container">
+        <div className="site-container">
+          <div className="fellowship-hero-container">
           <div className="fellowship-hero-content">
             <div className="fellowship-hero-badge-wrap">
               <span className="fellowship-pill-badge">
@@ -335,7 +336,8 @@ export default function Fellowship({ openEnquiry }) {
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ----------------- 2. Fellowship Information Highlight Band ----------------- */}
       <section className="fellowship-info-strip" aria-label="Program Highlights">

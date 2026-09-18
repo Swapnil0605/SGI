@@ -214,20 +214,22 @@ export default function NursingCollege({ openEnquiry }) {
 
       {/* ----------------- 2. About College Section ----------------- */}
       <section className="nursing-about-section">
-        <div className="site-container nursing-about-container">
-          <span className="section-eyebrow">EXCELLENCE IN HEALTHCARE EDUCATION</span>
-          <h2 className="nursing-about-title">
-            A Strong Foundation for a Career in Nursing
-          </h2>
-          <div className="nursing-accent-bar" aria-hidden="true"></div>
+        <div className="site-container">
+          <div className="nursing-about-container">
+            <span className="section-eyebrow">EXCELLENCE IN HEALTHCARE EDUCATION</span>
+            <h2 className="nursing-about-title">
+              A Strong Foundation for a Career in Nursing
+            </h2>
+            <div className="nursing-accent-bar" aria-hidden="true"></div>
 
-          <div className="nursing-about-body">
-            <p className="nursing-lead-para">
-              B.Sc. Nursing combines healthcare knowledge, clinical skills and compassionate patient care. At Surannavar College of Nursing, students develop the knowledge and practical capabilities needed to grow into confident healthcare professionals.
-            </p>
-            <p className="nursing-secondary-para">
-              Through academic learning, practical training and clinical experience, students are prepared to understand patient needs and contribute effectively to healthcare delivery.
-            </p>
+            <div className="nursing-about-body">
+              <p className="nursing-lead-para">
+                B.Sc. Nursing combines healthcare knowledge, clinical skills and compassionate patient care. At Surannavar College of Nursing, students develop the knowledge and practical capabilities needed to grow into confident healthcare professionals.
+              </p>
+              <p className="nursing-secondary-para">
+                Through academic learning, practical training and clinical experience, students are prepared to understand patient needs and contribute effectively to healthcare delivery.
+              </p>
+            </div>
           </div>
         </div>
       </section>

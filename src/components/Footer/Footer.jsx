@@ -19,7 +19,7 @@ export default function Footer({ openEnquiry: propOpenEnquiry, scrollToTop }) {
 
   return (
     <footer className="site-footer" id="contact">
-      <div className="site-container footer-container">
+      <div className="site-container">
         
         <div className="footer-top-grid">
           

@@ -101,6 +101,7 @@
 
   /* Layout */
   --container-width: 1270px;
+  --container-padding: clamp(0.75rem, 1.5vw, 1rem);
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 14px;
@@ -163,7 +164,16 @@ button {
   max-width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
- 
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .site-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 }
 
 /* ----------------- Global Buttons System ----------------- */

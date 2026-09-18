@@ -168,15 +168,17 @@ export default function Gallery() {
 
       {/* ----------------- 1. Hero Section ----------------- */}
       <section className="gallery-hero-section">
-        <div className="site-container gallery-hero-container">
-          <span className="gallery-hero-badge">
-            <Sparkles size={14} />
-            CAMPUS & CLINICAL LIFE
-          </span>
-          <h1 className="gallery-hero-title">Visual Showcase</h1>
-          <p className="gallery-hero-desc">
-            Explore our state-of-the-art superspeciality hospital, robotic surgery suites, academic campus, and vibrant healthcare education fraternity in Belagavi.
-          </p>
+        <div className="site-container">
+          <div className="gallery-hero-container">
+            <span className="gallery-hero-badge">
+              <Sparkles size={14} />
+              CAMPUS & CLINICAL LIFE
+            </span>
+            <h1 className="gallery-hero-title">Visual Showcase</h1>
+            <p className="gallery-hero-desc">
+              Explore our state-of-the-art superspeciality hospital, robotic surgery suites, academic campus, and vibrant healthcare education fraternity in Belagavi.
+            </p>
+          </div>
         </div>
       </section>
 

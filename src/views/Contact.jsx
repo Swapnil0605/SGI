@@ -366,15 +366,17 @@ export default function Contact() {
 
       {/* ----------------- 1. Hero / Header ----------------- */}
       <section className="contact-hero-section" id="contact">
-        <div className="site-container contact-hero-container">
-          <span className="contact-hero-tag">
-            <Sparkles size={14} />
-            CONNECT WITH US
-          </span>
-          <h1 className="contact-hero-title">Get in Touch</h1>
-          <p className="contact-hero-subtitle">
-            Have a question about admissions, our institutions or healthcare services? We're here to help.
-          </p>
+        <div className="site-container">
+          <div className="contact-hero-container">
+            <span className="contact-hero-tag">
+              <Sparkles size={14} />
+              CONNECT WITH US
+            </span>
+            <h1 className="contact-hero-title">Get in Touch</h1>
+            <p className="contact-hero-subtitle">
+              Have a question about admissions, our institutions or healthcare services? We're here to help.
+            </p>
+          </div>
         </div>
       </section>
 

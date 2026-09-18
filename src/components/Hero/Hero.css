@@ -162,8 +162,13 @@
   border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.strip-item:first-child {
+  padding-left: 0;
+}
+
 .strip-item:last-child {
   border-right: none;
+  padding-right: 0;
 }
 
 .strip-icon-circle {
@@ -213,6 +218,11 @@
   .strip-item {
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.25rem 0;
+  }
+
+  .strip-item:first-child {
+    padding-left: 0;
   }
 }
 
@@ -241,6 +251,6 @@
   }
 
   .strip-item {
-    padding: 1rem 1.25rem;
+    padding: 1rem 0;
   }
 }

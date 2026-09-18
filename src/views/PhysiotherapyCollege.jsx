@@ -210,20 +210,22 @@ export default function PhysiotherapyCollege({ openEnquiry }) {
 
       {/* ----------------- 2. About College Section ----------------- */}
       <section className="nursing-about-section">
-        <div className="site-container nursing-about-container">
-          <span className="section-eyebrow">EXCELLENCE IN REHABILITATION & MOVEMENT SCIENCE</span>
-          <h2 className="nursing-about-title">
-            Where the Science of Movement Meets Patient Care
-          </h2>
-          <div className="nursing-accent-bar" aria-hidden="true"></div>
+        <div className="site-container">
+          <div className="nursing-about-container">
+            <span className="section-eyebrow">EXCELLENCE IN REHABILITATION & MOVEMENT SCIENCE</span>
+            <h2 className="nursing-about-title">
+              Where the Science of Movement Meets Patient Care
+            </h2>
+            <div className="nursing-accent-bar" aria-hidden="true"></div>
 
-          <div className="nursing-about-body">
-            <p className="nursing-lead-para">
-              Physiotherapy combines knowledge of the human body with assessment, rehabilitation and hands-on clinical practice. At Surannavar College of Physiotherapy, students develop the skills needed to understand movement, support recovery and contribute to patient care.
-            </p>
-            <p className="nursing-secondary-para">
-              Through academic learning, practical training and clinical experience, students build the confidence to progress towards a professional career in physiotherapy.
-            </p>
+            <div className="nursing-about-body">
+              <p className="nursing-lead-para">
+                Physiotherapy combines knowledge of the human body with assessment, rehabilitation and hands-on clinical practice. At Surannavar College of Physiotherapy, students develop the skills needed to understand movement, support recovery and contribute to patient care.
+              </p>
+              <p className="nursing-secondary-para">
+                Through academic learning, practical training and clinical experience, students build the confidence to progress towards a professional career in physiotherapy.
+              </p>
+            </div>
           </div>
         </div>
       </section>

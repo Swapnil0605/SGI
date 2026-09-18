@@ -160,7 +160,8 @@ export default function Career() {
 
       {/* ----------------- 1. Hero Section ----------------- */}
       <section className="career-hero-section">
-        <div className="site-container career-hero-container">
+        <div className="site-container">
+          <div className="career-hero-container">
           <div className="career-hero-content">
             <span className="career-hero-badge">
               <Sparkles size={14} />
@@ -196,6 +197,7 @@ export default function Career() {
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -298,7 +300,7 @@ export default function Career() {
 
                 <div className="job-card-footer">
                   <a
-                    href={`mailto:admissions@surannavarinstitutions.edu.in?subject=Application for ${encodeURIComponent(job.title)}`}
+                    href={`mailto:dr.jsconprincipal@gmail.com?subject=Application for ${encodeURIComponent(job.title)}`}
                     className="btn-job-apply"
                   >
                     Apply for Position <ArrowRight size={15} />
@@ -326,7 +328,7 @@ export default function Career() {
                   <Mail size={18} />
                   <div>
                     <span className="contact-label">Email Your Resume to:</span>
-                    <a href="mailto:admissions@surannavarinstitutions.edu.in">admissions@surannavarinstitutions.edu.in</a>
+                    <a href="mailto:dr.jsconprincipal@gmail.com">dr.jsconprincipal@gmail.com</a>
                   </div>
                 </div>
                 <div className="career-contact-item">
@@ -344,7 +346,7 @@ export default function Career() {
               <p>You can also use our dedicated contact form to get in touch with our recruitment team directly.</p>
               <div className="apply-card-buttons">
                 <a
-                  href="mailto:admissions@surannavarinstitutions.edu.in?subject=General Career Application - Surannavar Group"
+                  href="mailto:dr.jsconprincipal@gmail.com?subject=General Career Application - Surannavar Group"
                   className="btn-apply-email-primary"
                 >
                   <Send size={16} /> Email Your Resume

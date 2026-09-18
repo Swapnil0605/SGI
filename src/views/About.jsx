@@ -6,7 +6,8 @@ import {
   Building,
   GraduationCap,
   Award,
-  ChevronRight
+  ChevronRight,
+  Sparkles
 } from 'lucide-react';
 import './About.css';
 
@@ -31,22 +32,51 @@ export default function About({ openEnquiry }) {
         </div>
       </nav>
 
-      {/* ----------------- 1. About Overview Section ----------------- */}
-      <section className="about-hero-section">
-        <div className="site-container about-hero-container">
-          <span className="about-tag-pill">ABOUT SURANNAVAR GROUP OF INSTITUTIONS</span>
-          <h1 className="about-hero-title">
-            Committed to Excellence in Healthcare Education
-          </h1>
-          <div className="about-lead-rule" aria-hidden="true"></div>
-          
-          <div className="about-hero-lead-box">
-            <p className="about-lead-text">
-              Surannavar Group of Institutions, an initiative by Surannavar Superspeciality Hospital led by Dr. Jagadish Vittal Surannavar, is founded with a vision to nurture compassionate, skilled, and competent nursing professionals. Backed by a legacy of excellence in orthopedic and trauma care, the college aims to provide quality healthcare education that blends academic rigor with real-world clinical exposure.
+      {/* ----------------- 1. About Hero Banner ----------------- */}
+      <section className="about-hero-banner">
+        <img
+          src="/images/hero_banner.jpg"
+          alt="Surannavar Group of Institutions Campus"
+          className="about-hero-bg"
+        />
+        <div className="about-hero-overlay"></div>
+
+        <div className="site-container">
+          <div className="about-hero-content">
+            <div className="about-hero-tag">
+              <Sparkles size={14} />
+              SURANNAVAR GROUP OF INSTITUTIONS
+            </div>
+            
+            <h1 className="about-hero-title">
+              About Surannavar Group
+            </h1>
+
+            <p className="about-hero-subtitle">
+              A healthcare-driven educational institution in Belagavi, committed to academic rigor, clinical excellence, and nurturing compassionate healthcare leaders.
             </p>
-            <p className="about-secondary-text">
-              Our institution is committed to building a strong foundation in theory, ethics, and practice, preparing students to meet the evolving healthcare needs of the society. With expert faculty, modern infrastructure, and hands-on training, we aim to develop future-ready professionals who serve with care, confidence, and compassion.
-            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ----------------- 2. About Overview Section ----------------- */}
+      <section className="about-overview-section" id="overview">
+        <div className="site-container">
+          <div className="about-overview-container">
+            <span className="about-tag-pill">ACADEMIC FOUNDATION</span>
+            <h2 className="about-overview-title">
+              Committed to Excellence in Healthcare Education
+            </h2>
+            <div className="about-lead-rule" aria-hidden="true"></div>
+            
+            <div className="about-hero-lead-box">
+              <p className="about-lead-text">
+                Surannavar Group of Institutions, an initiative by Surannavar Superspeciality Hospital led by Dr. Jagadish Vittal Surannavar, is founded with a vision to nurture compassionate, skilled, and competent nursing professionals. Backed by a legacy of excellence in orthopedic and trauma care, the college aims to provide quality healthcare education that blends academic rigor with real-world clinical exposure.
+              </p>
+              <p className="about-secondary-text">
+                Our institution is committed to building a strong foundation in theory, ethics, and practice, preparing students to meet the evolving healthcare needs of the society. With expert faculty, modern infrastructure, and hands-on training, we aim to develop future-ready professionals who serve with care, confidence, and compassion.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -327,21 +357,23 @@ export default function About({ openEnquiry }) {
 
       {/* ----------------- 6. CTA Strip ----------------- */}
       <section className="about-cta-strip">
-        <div className="site-container about-cta-strip-inner">
-          <h3>Ready to Begin Your Healthcare Career?</h3>
-          <p>
-            Admissions are open for academic year 2026–27. Join Surannavar Group of Institutions and gain hands-on clinical mastery.
-          </p>
-          <div className="about-cta-buttons">
-            <Link
-              href="/contact#enquiry"
-              className="btn btn-primary"
-            >
-              Apply for Admissions 2026–27
-            </Link>
-            <Link href="/#colleges" className="btn btn-outline-white">
-              Explore Programmes
-            </Link>
+        <div className="site-container">
+          <div className="about-cta-strip-inner">
+            <h3>Ready to Begin Your Healthcare Career?</h3>
+            <p>
+              Admissions are open for academic year 2026–27. Join Surannavar Group of Institutions and gain hands-on clinical mastery.
+            </p>
+            <div className="about-cta-buttons">
+              <Link
+                href="/contact#enquiry"
+                className="btn btn-primary"
+              >
+                Apply for Admissions 2026–27
+              </Link>
+              <Link href="/#colleges" className="btn btn-outline-white">
+                Explore Programmes
+              </Link>
+            </div>
           </div>
         </div>
       </section>

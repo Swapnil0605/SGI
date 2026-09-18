@@ -205,20 +205,22 @@ export default function AlliedHealthCollege({ openEnquiry }) {
 
       {/* ----------------- 2. About College Section ----------------- */}
       <section className="nursing-about-section">
-        <div className="site-container nursing-about-container">
-          <span className="section-eyebrow">EXCELLENCE IN SPECIALISED HEALTHCARE</span>
-          <h2 className="nursing-about-title">
-            Where Science Meets Specialised Healthcare
-          </h2>
-          <div className="nursing-accent-bar" aria-hidden="true"></div>
+        <div className="site-container">
+          <div className="nursing-about-container">
+            <span className="section-eyebrow">EXCELLENCE IN SPECIALISED HEALTHCARE</span>
+            <h2 className="nursing-about-title">
+              Where Science Meets Specialised Healthcare
+            </h2>
+            <div className="nursing-accent-bar" aria-hidden="true"></div>
 
-          <div className="nursing-about-body">
-            <p className="nursing-lead-para">
-              Allied health professionals play an essential role in modern healthcare, supporting diagnosis, treatment, monitoring and patient care alongside doctors, nurses and other healthcare professionals.
-            </p>
-            <p className="nursing-secondary-para">
-              At Surannavar College of Allied Health Sciences, students combine scientific knowledge, technical training and practical learning to develop the skills needed for specialised healthcare practice.
-            </p>
+            <div className="nursing-about-body">
+              <p className="nursing-lead-para">
+                Allied health professionals play an essential role in modern healthcare, supporting diagnosis, treatment, monitoring and patient care alongside doctors, nurses and other healthcare professionals.
+              </p>
+              <p className="nursing-secondary-para">
+                At Surannavar College of Allied Health Sciences, students combine scientific knowledge, technical training and practical learning to develop the skills needed for specialised healthcare practice.
+              </p>
+            </div>
           </div>
         </div>
       </section>

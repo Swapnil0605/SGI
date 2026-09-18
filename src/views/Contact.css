@@ -75,6 +75,7 @@
   position: relative;
   z-index: 2;
   max-width: 840px;
+  margin: 0;
 }
 
 .contact-hero-tag {

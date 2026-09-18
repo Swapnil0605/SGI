@@ -123,15 +123,11 @@
   box-shadow: 0 6px 24px rgba(7, 34, 68, 0.18);
 }
 
-.school-faculty-strip .site-container {
-  max-width: 1380px;
-}
-
 .school-faculty-layout {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 4.5rem;
+  gap: clamp(1.5rem, 3.5vw, 4rem);
 }
 
 .school-faculty-brand {
@@ -289,6 +285,7 @@
 
 .nursing-about-container {
   max-width: 980px;
+  margin: 0;
 }
 
 .section-eyebrow {
